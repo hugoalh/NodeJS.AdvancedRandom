@@ -12,7 +12,7 @@ const unsignedInteger = require("./unsignedinteger.js");
  * @alias int
  * @param {object} [configuration]
  * @param {string} [configuration.endian="B"]
- * @param {string} [configuration.method="digit"]
+ * @param {string} [configuration.method="set"]
  * @param {number} [configuration.range=1e15]
  */
 function signedInteger(configuration) {
