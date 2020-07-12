@@ -36,23 +36,18 @@ NodeJS (v8+) & NPMJS (v6+):
 
 ### API
 
-|  | **Description** |
-|:----|:----|
-| `signedFloat(endian?)` | Return type of signed float number, 16-digits decimal, between -1 (exclude) and 1 (exclude). |
-| `signedInteger({range?, endian?})` | ***range {number.positiveInteger = 999999999999}:*** Range apply on both sides (i.e.: positive and negative); Support up to 12 digits positive integer number.<br /><br />Return type of signed integer number, between negative range (include) and positive range (include). |
-| `unsignedFloat(endian?)` | Return type of unsigned float number, 16-digits decimal, between 0 (include) and 1 (exclude) (i.e.: having same function as `Math.random()`). |
-| `unsignedInteger({range?, endian?})` | ***range {number.positiveInteger = 999999999999}:*** Support up to 12 digits positive integer number.<br /><br />Return type of unsigned integer number, between 0 (include) and positive range (include). |
-
-#### Argument
-
-*Argument(s) that apply to all API(s) are listed here.*
-
-- ***endian {string.upperCase = "B"}:*** Only accept `"B"` (big endian) and `"L"` (little endian).
+- `signedFloat(configuration?)`
+- `signedInteger(configuration?)`
+- `unsignedFloat(configuration?)`
+- `unsignedInteger(configuration?})`
 
 ### Example
 
 ```javascript
 const advancedRandom = require("@hugoalh/advanced-random");
 
-console.log(advancedRandom.version);// "1.0.0"
+console.log(advancedRandom.signedFloat());// -0.159632574589625
+console.log(advancedRandom.signedInteger());// -456258741587453
+console.log(advancedRandom.unsignedFloat());// 0.654123578614532
+console.log(advancedRandom.unsignedInteger());// 158745698552365
 ```
