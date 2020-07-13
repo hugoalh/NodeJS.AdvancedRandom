@@ -28,7 +28,7 @@ A module/library to provide a better random method via crypto.
 
 ### Getting Started
 
-NodeJS (v8+) & NPMJS (v6+):
+NodeJS (v8+) & NPM (v6+):
 
 ```powershell
 > npm install @hugoalh/advanced-determine
