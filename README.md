@@ -11,6 +11,7 @@
 ![](https://img.shields.io/github/watchers/hugoalh/NodeJS.AdvancedRandom?style=flat-square&logo=github)
 ![](https://img.shields.io/github/stars/hugoalh/NodeJS.AdvancedRandom?style=flat-square&logo=github)
 ![](https://img.shields.io/github/forks/hugoalh/NodeJS.AdvancedRandom?style=flat-square&logo=github)
+[![](https://www.codefactor.io/repository/github/hugoalh/nodejs.advancedrandom/badge)](https://www.codefactor.io/repository/github/hugoalh/nodejs.advancedrandom)
 [![](https://img.shields.io/lgtm/alerts/g/hugoalh/NodeJS.AdvancedRandom.svg?style=flat-square&logo=lgtm&label=%20)](https://lgtm.com/projects/g/hugoalh/NodeJS.AdvancedRandom/alerts)
 [![](https://img.shields.io/lgtm/grade/javascript/g/hugoalh/NodeJS.AdvancedRandom.svg?style=flat-square&logo=lgtm)](https://lgtm.com/projects/g/hugoalh/NodeJS.AdvancedRandom/context:javascript)
 
