@@ -1,9 +1,9 @@
 # ==================
-# hugoalh's Repository Resource - NPMJS Ignore
+# hugoalh's Repository Resource - NPM Ignore
 #   Language:
 #     Git-Configuration
 #   Last Update:
-#     2020-07-05
+#     2020-07-13
 # ==================
 _compareTemp
 _notes
@@ -143,5 +143,5 @@ yarn-error.log*
 .gitattributes
 .github/*
 .gitignore
+.lgtm.yml
 .npmignore
-lgtm.yml
