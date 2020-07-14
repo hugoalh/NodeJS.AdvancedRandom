@@ -37,10 +37,10 @@ NodeJS (v8+) & NPM (v6+):
 
 ### API
 
-- `signedFloat(configuration?)`
-- `signedInteger(configuration?)`
-- `unsignedFloat(configuration?)`
-- `unsignedInteger(configuration?})`
+- `signedFloat(option?)`
+- `signedInteger(option?)`
+- `unsignedFloat(option?)`
+- `unsignedInteger(option?)`
 
 ### Example
 
