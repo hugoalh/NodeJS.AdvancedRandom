@@ -10,16 +10,16 @@ const unsignedInteger = require("./unsignedinteger.js");
  * @alias integer
  * @alias int
  * @description Give a random signed integer number in the given range.
- * @param {object} [configuration] Configuration.
- * @param {string} [configuration.endian="B"] Endian.
- * @param {string} [configuration.method="set"] Method.
- * @param {number} [configuration.range=1e16] Range.
+ * @param {object} [option] Option.
+ * @param {string} [option.endian="B"] Endian.
+ * @param {string} [option.method="set"] Method.
+ * @param {number} [option.range=1e16] Range.
  * @returns {number} A random signed integer number.
  */
-function signedInteger(configuration) {
-	const data = unsignedInteger(configuration);
+function signedInteger(option) {
+	const data = unsignedInteger(option);
 	let result;
-	if (randomCore(true, 1, configuration.endian) < 0) {
+	if (randomCore(true, 1, option.endian) < 0) {
 		result = -data;
 	} else {
 		result = data;

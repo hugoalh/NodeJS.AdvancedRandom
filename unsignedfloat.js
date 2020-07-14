@@ -10,25 +10,27 @@ const unsignedInteger = require("./unsignedinteger.js");
  * @alias uFloat
  * @alias uFlt
  * @description Give a random unsigned float number.
- * @param {object} [configuration] Configuration.
- * @param {string} [configuration.endian="B"] Endian.
- * @param {string} [configuration.method="digit"] Method.
+ * @param {object} [option] Option.
+ * @param {string} [option.endian="B"] Endian.
+ * @param {string} [option.method="digit"] Method.
  * @returns {number} A random unsigned float number.
  */
-function unsignedFloat(configuration) {
-	let method = "digit";
-	if (advancedDetermine.isJSON(configuration) == true) {
-		if (configuration.method) {
-			if (advancedDetermine.isString(configuration.method) == true) {
-				method = configuration.method.toLowerCase();
+function unsignedFloat(option) {
+	let runtime = {
+		method: "digit"
+	};
+	if (advancedDetermine.isJSON(option) == true) {
+		if (option.method) {
+			if (advancedDetermine.isString(option.method) == true) {
+				runtime.method = option.method.toLowerCase();
 			} else {
-				console.warn(`Invalid type of "configuration.method"! Require type of string. Ignored this parameter.`);
+				console.warn(`Invalid type of "option.method"! Require type of string. Ignored this parameter.`);
 			};
 		};
 	};
 	const data = unsignedInteger({
-		endian: configuration.endian,
-		method: method,
+		endian: option.endian,
+		method: runtime.method,
 		range: 1e16
 	});
 	const result = Number.parseFloat((data * 1e-16).toFixed(15));

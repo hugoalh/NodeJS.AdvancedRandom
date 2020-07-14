@@ -10,15 +10,15 @@ const unsignedFloat = require("./unsignedfloat.js");
  * @alias float
  * @alias flt
  * @description Give a random signed float number.
- * @param {object} [configuration] Configuration.
- * @param {string} [configuration.endian="B"] Endian.
- * @param {string} [configuration.method="digit"] Method.
+ * @param {object} [option] Option.
+ * @param {string} [option.endian="B"] Endian.
+ * @param {string} [option.method="digit"] Method.
  * @returns {number} A random signed float number.
  */
-function signedFloat(configuration) {
-	const data = unsignedFloat(configuration);
+function signedFloat(option) {
+	const data = unsignedFloat(option);
 	let result;
-	if (randomCore(true, 1, configuration.endian) < 0) {
+	if (randomCore(true, 1, option.endian) < 0) {
 		result = -data;
 	} else {
 		result = data;

@@ -15,11 +15,11 @@ const internalService = require("./internalservice.js");
  */
 function randomCore(signed, byteRange, endian = "B") {
 	if (advancedDetermine.isString(endian) != true) {
-		return internalService.typeError(`Invalid type of "configuration.endian"! Require type of string.`);
+		return internalService.typeError(`Invalid type of "option.endian"! Require type of string.`);
 	};
 	endian = endian.toUpperCase();
 	if (endian !== "B" && endian !== "L") {
-		return internalService.referenceError(`Invalid reference of "configuration.endian"! (Read the documentation for more information.)`);
+		return internalService.referenceError(`Invalid reference of "option.endian"! (Read the documentation for more information.)`);
 	};
 	const signedString = signed ? "" : "U";
 	const reader = `read${signedString}Int${endian}E`;
