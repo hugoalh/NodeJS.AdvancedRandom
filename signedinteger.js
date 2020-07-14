@@ -7,8 +7,8 @@ const randomCore = require("./randomcore.js");
 const unsignedInteger = require("./unsignedinteger.js");
 /**
  * @function signedInteger
- * @alias integer
  * @alias int
+ * @alias integer
  * @description Give a random signed integer number in the given range.
  * @param {object} [option] Option.
  * @param {string} [option.endian="B"] Endian.

@@ -8,8 +8,8 @@ const internalService = require("./internalservice.js");
 const randomCore = require("./randomcore.js");
 /**
  * @function unsignedInteger
- * @alias uInteger
  * @alias uInt
+ * @alias uInteger
  * @description Give a random unsigned integer number in the given range.
  * @param {object} [option] Option.
  * @param {string} [option.endian="B"] Endian.

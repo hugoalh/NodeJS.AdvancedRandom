@@ -19,6 +19,6 @@
 	},
 	"homepage": "https://github.com/hugoalh/NodeJS.AdvancedRandom#readme",
 	"dependencies": {
-		"@hugoalh/advanced-determine": "^2.0.1"
+		"@hugoalh/advanced-determine": "^2.0.2"
 	}
 }
