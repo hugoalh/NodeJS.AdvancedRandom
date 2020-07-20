@@ -4,6 +4,7 @@
 		NodeJS 14
 ==================*/
 const advancedDetermine = require("@hugoalh/advanced-determine");
+const internalService = require("./internalservice.js");
 const unsignedInteger = require("./unsignedinteger.js");
 /**
  * @function unsignedFloat
@@ -21,11 +22,10 @@ function unsignedFloat(option) {
 	};
 	if (advancedDetermine.isJSON(option) == true) {
 		if (option.method) {
-			if (advancedDetermine.isString(option.method) == true) {
-				runtime.method = option.method.toLowerCase();
-			} else {
-				console.warn(`Invalid type of "option.method"! Require type of string. Ignored this parameter.`);
+			if (advancedDetermine.isString(option.method) != true) {
+				return internalService.typeError(`Invalid type of "option.method"! Require type of string.`);
 			};
+			runtime.method = option.method.toLowerCase();
 		};
 	};
 	const data = unsignedInteger({

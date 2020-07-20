@@ -24,17 +24,16 @@ function unsignedInteger(option) {
 	};
 	if (advancedDetermine.isJSON(option) == true) {
 		if (option.method) {
-			if (advancedDetermine.isString(option.method) == true) {
-				runtime.method = option.method.toLowerCase();
-			} else {
-				console.warn(`Invalid type of "option.method"! Require type of string. Ignored this parameter.`);
+			if (advancedDetermine.isString(option.method) != true) {
+				return internalService.typeError(`Invalid type of "option.method"! Require type of string.`);
 			};
+			runtime.method = option.method.toLowerCase();
 		};
 		if (option.range) {
 			if (advancedDetermine.isNumberPositiveInteger(option.range) == true && option.range >= 2 && option.range <= runtime.range) {
 				runtime.range = option.range;
 			} else {
-				console.warn(`Invalid type of "option.range"! Require type of positive integer number, >= 2, and <= ${runtime.range}. Ignored this parameter.`);
+				return internalService.typeError(`Invalid type of "option.range"! Require type of positive integer number, >= 2, and <= ${runtime.range}.`);
 			};
 		};
 	};

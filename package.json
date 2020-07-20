@@ -1,6 +1,6 @@
 {
 	"name": "@hugoalh/advanced-random",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A module/library to provide a better random method via crypto.",
 	"main": "main.js",
 	"repository": {
@@ -19,6 +19,6 @@
 	},
 	"homepage": "https://github.com/hugoalh/NodeJS.AdvancedRandom#readme",
 	"dependencies": {
-		"@hugoalh/advanced-determine": "^2.0.2"
+		"@hugoalh/advanced-determine": "^3.0.0"
 	}
 }
