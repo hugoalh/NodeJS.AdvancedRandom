@@ -19,7 +19,7 @@
 		"url": "git+https://github.com/hugoalh/NodeJS.AdvancedRandom.git"
 	},
 	"dependencies": {
-		"@hugoalh/advanced-determine": "^3.0.0"
+		"@hugoalh/advanced-determine": "^3.0.1"
 	},
 	"engines": {
 		"node": ">= 10.0.0",
