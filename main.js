@@ -6,7 +6,7 @@
 /**
  * @const {string} version
  */
-const version = "1.0.1";
+const version = "1.0.2";
 
 const configuration = require("./configuration.js");
 const signedFloat = require("./signedfloat.js");

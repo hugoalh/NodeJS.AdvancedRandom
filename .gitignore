@@ -3,7 +3,7 @@
 #   Language:
 #     Git-Configuration
 #   Last Update:
-#     2020-07-05
+#     2020-07-25
 # ==================
 _compareTemp
 _notes
@@ -44,7 +44,6 @@ _notes
 .ninja_log
 .node_repl_history
 .npm
-.npmrc
 .nuxt
 .nyc_output
 .recommenders
