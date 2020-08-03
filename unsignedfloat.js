@@ -20,7 +20,7 @@ function unsignedFloat(option) {
 	let runtime = {
 		method: "digit"
 	};
-	if (advancedDetermine.isJSON(option) == true) {
+	if (advancedDetermine.isObject(option) == true) {
 		if (option.method) {
 			if (advancedDetermine.isString(option.method) != true) {
 				return internalService.typeError(`Invalid type of "option.method"! Require type of string.`);

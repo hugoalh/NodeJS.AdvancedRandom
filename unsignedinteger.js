@@ -22,7 +22,7 @@ function unsignedInteger(option) {
 		method: "set",
 		range: 1e16
 	};
-	if (advancedDetermine.isJSON(option) == true) {
+	if (advancedDetermine.isObject(option) == true) {
 		if (option.method) {
 			if (advancedDetermine.isString(option.method) != true) {
 				return internalService.typeError(`Invalid type of "option.method"! Require type of string.`);
