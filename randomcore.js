@@ -10,7 +10,7 @@ const internalService = require("./internalservice.js");
  * @function randomCore
  * @param {boolean} signed
  * @param {number} byteRange
- * @param {string} [endian]
+ * @param {string} [endian="B"]
  * @returns {number}
  */
 function randomCore(signed, byteRange, endian = "B") {

@@ -22,14 +22,14 @@ function unsignedInteger(option) {
 		method: "set",
 		range: 1e16
 	};
-	if (advancedDetermine.isObject(option) == true) {
-		if (option.method) {
+	if (advancedDetermine.isObjectPair(option) == true) {
+		if (typeof option.method != "undefined") {
 			if (advancedDetermine.isString(option.method) != true) {
 				return internalService.typeError(`Invalid type of "option.method"! Require type of string.`);
 			};
 			runtime.method = option.method.toLowerCase();
 		};
-		if (option.range) {
+		if (typeof option.range != "undefined") {
 			if (advancedDetermine.isNumberPositiveInteger(option.range) == true && option.range >= 2 && option.range <= runtime.range) {
 				runtime.range = option.range;
 			} else {
