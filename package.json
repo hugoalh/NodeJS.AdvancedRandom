@@ -1,6 +1,6 @@
 {
 	"name": "@hugoalh/advanced-random",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "A module/library to provide a better random method via crypto.",
 	"keywords": [
 		"nodejs",
@@ -19,7 +19,7 @@
 		"url": "git+https://github.com/hugoalh/NodeJS.AdvancedRandom.git"
 	},
 	"dependencies": {
-		"@hugoalh/advanced-determine": "^3.1.0"
+		"@hugoalh/advanced-determine": "^3.2.0"
 	},
 	"engines": {
 		"node": ">= 10.0.0",

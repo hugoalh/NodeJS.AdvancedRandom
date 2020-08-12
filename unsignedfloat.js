@@ -23,7 +23,7 @@ function unsignedFloat(option) {
 	if (advancedDetermine.isObjectPair(option) == true) {
 		if (typeof option.method != "undefined") {
 			if (advancedDetermine.isString(option.method) != true) {
-				return internalService.typeError(`Invalid type of "option.method"! Require type of string.`);
+				return internalService.prefabTypeError("option.method", "string");
 			};
 			runtime.method = option.method.toLowerCase();
 		};

@@ -25,7 +25,7 @@ function unsignedInteger(option) {
 	if (advancedDetermine.isObjectPair(option) == true) {
 		if (typeof option.method != "undefined") {
 			if (advancedDetermine.isString(option.method) != true) {
-				return internalService.typeError(`Invalid type of "option.method"! Require type of string.`);
+				return internalService.prefabTypeError("option.method", "string");
 			};
 			runtime.method = option.method.toLowerCase();
 		};
@@ -33,7 +33,7 @@ function unsignedInteger(option) {
 			if (advancedDetermine.isNumberPositiveInteger(option.range) == true && option.range >= 2 && option.range <= runtime.range) {
 				runtime.range = option.range;
 			} else {
-				return internalService.typeError(`Invalid type of "option.range"! Require type of positive integer number, >= 2, and <= ${runtime.range}.`);
+				return internalService.prefabTypeError("option.range", `positive integer number, >= 2, and <= ${runtime.range}`);
 			};
 		};
 	};
@@ -72,7 +72,7 @@ function unsignedInteger(option) {
 			result = Math.ceil((result / (internalService.rdBytes6 * bigSetModuleCount)) * runtime.range) - bigSetModuleCount;
 			break;
 		default:
-			return internalService.referenceError(`Invalid reference of "option.method"! (Read the documentation for more information.)`);
+			throw new ReferenceError(`Invalid reference of "option.method"! (Read the documentation for more information.)`);
 			break;
 	};
 	return result;

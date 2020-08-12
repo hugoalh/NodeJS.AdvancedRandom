@@ -6,16 +6,12 @@
 /**
  * @const {string} version
  */
-const version = "1.0.3";
+const version = "1.0.4";
 
-const configuration = require("./configuration.js");
 const signedFloat = require("./signedfloat.js");
 const signedInteger = require("./signedinteger.js");
 const unsignedFloat = require("./unsignedfloat.js");
 const unsignedInteger = require("./unsignedinteger.js");
-module.exports.cfg = configuration;
-module.exports.config = configuration;
-module.exports.configuration = configuration;
 module.exports.float = signedFloat;
 module.exports.flt = signedFloat;
 module.exports.int = signedInteger;
