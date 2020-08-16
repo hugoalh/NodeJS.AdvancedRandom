@@ -3,6 +3,8 @@
 	Language:
 		NodeJS 14
 ==================*/
+const advancedDetermine = require("@hugoalh/advanced-determine");
+const internalService = require("./internalservice.js");
 const randomCore = require("./randomcore.js");
 const unsignedInteger = require("./unsignedinteger.js");
 /**
@@ -17,13 +19,24 @@ const unsignedInteger = require("./unsignedinteger.js");
  * @returns {number} A random signed integer number.
  */
 function signedInteger(option) {
-	const data = unsignedInteger(option);
-	let result;
-	if (randomCore(true, 1, option.endian) < 0) {
-		result = -data;
-	} else {
-		result = data;
+	let runtime = {
+		endian: "B"
 	};
-	return result;
+	if (advancedDetermine.isObjectPair(option) == true) {
+		if (typeof option.endian != "undefined") {
+			if (advancedDetermine.isString(option.endian) != true) {
+				return internalService.prefabTypeError("option.endian", "string");
+			};
+			option.endian = option.endian.toUpperCase();
+			if (option.endian !== "B" && option.endian !== "L") {
+				return internalService.prefabReferenceError("option.endian");
+			};
+			runtime.endian = option.endian;
+		};
+	};
+	const bin = unsignedInteger(option);
+	return (
+		(randomCore(true, 1, runtime.endian) < 0) ? -bin : bin
+	);
 };
 module.exports = signedInteger;

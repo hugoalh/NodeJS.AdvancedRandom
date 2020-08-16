@@ -3,9 +3,7 @@
 	Language:
 		NodeJS 14
 ==================*/
-const advancedDetermine = require("@hugoalh/advanced-determine");
 const crypto = require("crypto");
-const internalService = require("./internalservice.js");
 /**
  * @private
  * @function randomCore
@@ -15,17 +13,6 @@ const internalService = require("./internalservice.js");
  * @returns {number}
  */
 function randomCore(signed = false, byteRange = 1, endian = "B") {
-	if (advancedDetermine.isString(endian) != true) {
-		return internalService.prefabTypeError("option.endian", "string");
-	};
-	endian = endian.toUpperCase();
-	if (endian !== "B" && endian !== "L") {
-		throw new ReferenceError(`Invalid reference of "option.endian"! (Read the documentation for more information.)`);
-	};
-	const signedString = signed ? "" : "U";
-	const reader = `read${signedString}Int${endian}E`;
-	const byte = crypto.randomBytes(byteRange);
-	const result = byte[reader](0, byteRange);
-	return result;
+	return crypto.randomBytes(byteRange)[`read${signed ? "" : "U"}Int${endian}E`](0, byteRange);
 };
 module.exports = randomCore;

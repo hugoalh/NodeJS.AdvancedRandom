@@ -18,9 +18,20 @@ const unsignedInteger = require("./unsignedinteger.js");
  */
 function unsignedFloat(option) {
 	let runtime = {
+		endian: "B",
 		method: "digit"
 	};
 	if (advancedDetermine.isObjectPair(option) == true) {
+		if (typeof option.endian != "undefined") {
+			if (advancedDetermine.isString(option.endian) != true) {
+				return internalService.prefabTypeError("option.endian", "string");
+			};
+			option.endian = option.endian.toUpperCase();
+			if (option.endian !== "B" && option.endian !== "L") {
+				return internalService.prefabReferenceError("option.endian");
+			};
+			runtime.endian = option.endian;
+		};
 		if (typeof option.method != "undefined") {
 			if (advancedDetermine.isString(option.method) != true) {
 				return internalService.prefabTypeError("option.method", "string");
@@ -28,12 +39,12 @@ function unsignedFloat(option) {
 			runtime.method = option.method.toLowerCase();
 		};
 	};
-	const data = unsignedInteger({
-		endian: option.endian,
-		method: runtime.method,
-		range: 1e16
-	});
-	const result = Number.parseFloat((data * 1e-16).toFixed(15));
-	return result;
+	return Number.parseFloat(
+		(unsignedInteger({
+			endian: runtime.endian,
+			method: runtime.method,
+			range: 1e16
+		}) * 1e-16).toFixed(15)
+	);
 };
 module.exports = unsignedFloat;

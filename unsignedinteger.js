@@ -19,10 +19,21 @@ const randomCore = require("./randomcore.js");
  */
 function unsignedInteger(option) {
 	let runtime = {
+		endian: "B",
 		method: "set",
 		range: 1e16
 	};
 	if (advancedDetermine.isObjectPair(option) == true) {
+		if (typeof option.endian != "undefined") {
+			if (advancedDetermine.isString(option.endian) != true) {
+				return internalService.prefabTypeError("option.endian", "string");
+			};
+			option.endian = option.endian.toUpperCase();
+			if (option.endian !== "B" && option.endian !== "L") {
+				return internalService.prefabReferenceError("option.endian");
+			};
+			runtime.endian = option.endian;
+		};
 		if (typeof option.method != "undefined") {
 			if (advancedDetermine.isString(option.method) != true) {
 				return internalService.prefabTypeError("option.method", "string");
@@ -38,20 +49,14 @@ function unsignedInteger(option) {
 		};
 	};
 	if (runtime.method === "set") {
-		if (runtime.range <= internalService.rdBytes3) {
-			runtime.method = "smallset";
-		} else {
-			runtime.method = "bigset";
-		};
+		runtime.method = (runtime.range <= internalService.rdBytes3) ? "smallset" : "bigset";
 	};
 	let result = 0;
 	switch (runtime.method) {
 		case "digit":
 			const digitModuleCount = runtime.range.toString().length;
 			for (let index = 0; index < digitModuleCount; index++) {
-				const element = randomCore(false, 1, option.endian) + 1;
-				const digit = Math.ceil((element / internalService.rdBytes1) * 10) - 1;
-				result = result * 10 + digit;
+				result = result * 10 + (Math.ceil(((randomCore(false, 1, runtime.endian) + 1) / internalService.rdBytes1) * 10) - 1);
 			};
 			result = Math.ceil(((result + 1) / Math.pow(10, digitModuleCount)) * runtime.range) - 1;
 			break;
@@ -59,7 +64,7 @@ function unsignedInteger(option) {
 		case "smallset":
 			const smallSetModuleCount = Math.ceil(runtime.range / internalService.rdBytes1);
 			for (let index = 0; index < smallSetModuleCount; index++) {
-				result += (randomCore(false, 1, option.endian) + 1);
+				result += (randomCore(false, 1, runtime.endian) + 1);
 			};
 			result = Math.ceil((result / (internalService.rdBytes1 * smallSetModuleCount)) * runtime.range) - smallSetModuleCount;
 			break;
@@ -67,12 +72,12 @@ function unsignedInteger(option) {
 		case "bigset":
 			const bigSetModuleCount = Math.ceil(runtime.range / internalService.rdBytes6);
 			for (let index = 0; index < bigSetModuleCount; index++) {
-				result += (randomCore(false, 6, option.endian) + 1);
+				result += (randomCore(false, 6, runtime.endian) + 1);
 			};
 			result = Math.ceil((result / (internalService.rdBytes6 * bigSetModuleCount)) * runtime.range) - bigSetModuleCount;
 			break;
 		default:
-			throw new ReferenceError(`Invalid reference of "option.method"! (Read the documentation for more information.)`);
+			return internalService.prefabReferenceError("option.method");
 			break;
 	};
 	return result;
