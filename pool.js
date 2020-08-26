@@ -14,12 +14,12 @@ const randomDatabase = {
 };
 /**
  * @function random
- * @description Give a random string.
+ * @description Give a random string in the given length.
  * @param {object} [option] Option.
  * @param {number} [option.length=8] Random string length.
  * @param {boolean} [option.lowerCase=true] Include lowercase.
  * @param {boolean} [option.number=false] Include number.
- * @param {(string|undefined)} [option.pool] Random pool.
+ * @param {(string|undefined)} [option.pool] Custom random pool.
  * @param {boolean} [option.symbol=false] Include symbol.
  * @param {boolean} [option.upperCase=false] Include uppercase.
  * @returns {string} A random string.
