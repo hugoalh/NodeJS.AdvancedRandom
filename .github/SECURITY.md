@@ -4,8 +4,8 @@
 
 | **Version** | **Support** |
 |:----|:----|
-| v1.0.4 | ✔ |
-| < v1.0.4 | ❌ |
+| v1.1.0 | ✔ |
+| < v1.1.0 | ❌ |
 
 ### Buggy
 
@@ -30,7 +30,7 @@ Please include these content(s) in the email!
 
 #### Title
 
-- Project index (mostly start with `hugoalh/`)
+- Project index (mostly start with `hugoalh-studio/`)
 - Affected version(s) (must be a supported version(s) listed above) (if this is too long, then move this section to body)
 
 #### Body

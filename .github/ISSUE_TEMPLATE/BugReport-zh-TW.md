@@ -2,7 +2,7 @@
 name: "錯誤報告"
 about: "報告一個錯誤。"
 title: ""
-labels: ""
+labels: "bug🐛,unconfirm📋"
 assignees: ""
 ---
 ## 描述
@@ -13,7 +13,7 @@ assignees: ""
 
 ## 版本
 
-*必須是[安全政策](https://github.com/hugoalh/NodeJS.AdvancedRandom/security/policy)中列出的受支持版本。（將此欄保留為空白將會默認為最新版本。）*
+*必須是[安全政策](https://github.com/hugoalh-studio/NodeJS.AdvancedRandom/security/policy)中列出的受支持版本。（將此欄保留為空白將會默認為最新版本。）*
 
 
 

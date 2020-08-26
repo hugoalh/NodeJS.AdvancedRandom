@@ -36,7 +36,7 @@ jobs:
           # message_embed_imageurl:
           # message_embed_videourl:
           message_embed_field_0_key: "GitHub"
-          message_embed_field_0_value: "https://github.com/hugoalh/NodeJS.AdvancedRandom"
+          message_embed_field_0_value: "https://github.com/hugoalh-studio/NodeJS.AdvancedRandom"
           message_embed_field_0_isinline: "false"
           message_embed_field_1_key: "NPM"
           message_embed_field_1_value: "https://www.npmjs.com/package/@hugoalh/advanced-random"

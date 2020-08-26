@@ -2,7 +2,7 @@
 name: "Bug Report"
 about: "Report a bug."
 title: ""
-labels: ""
+labels: "bug🐛,unconfirm📋"
 assignees: ""
 ---
 ## Describe
@@ -13,7 +13,7 @@ assignees: ""
 
 ## Version
 
-*Must be a supported version(s) listed in the [security policy](https://github.com/hugoalh/NodeJS.AdvancedRandom/security/policy). (Leaving this slot blank will default to the latest version.)*
+*Must be a supported version(s) listed in the [security policy](https://github.com/hugoalh-studio/NodeJS.AdvancedRandom/security/policy). (Leaving this slot blank will default to the latest version.)*
 
 
 
