@@ -26,17 +26,17 @@ function signedInteger(option) {
 		if (typeof option.endian != "undefined") {
 			if (advancedDetermine.isString(option.endian) != true) {
 				return internalService.prefabTypeError("option.endian", "string");
-			};
+			}
 			option.endian = option.endian.toUpperCase();
 			if (option.endian !== "B" && option.endian !== "L") {
 				return internalService.prefabReferenceError("option.endian");
-			};
+			}
 			runtime.endian = option.endian;
-		};
-	};
+		}
+	}
 	const bin = unsignedInteger(option);
 	return (
-		(randomCore(true, 1, runtime.endian) < 0) ? -bin : bin
+		randomCore(true, 1, runtime.endian) < 0 ? -bin : bin
 	);
-};
+}
 module.exports = signedInteger;

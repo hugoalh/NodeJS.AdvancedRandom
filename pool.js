@@ -40,61 +40,61 @@ function random(option) {
 				option.length == 0
 			) {
 				return internalService.prefabTypeError("option.length", "safe positive integer number, and > 0");
-			};
+			}
 			runtime.length = option.length;
-		};
+		}
 		if (typeof option.lowerCase != "undefined") {
 			if (typeof option.lowerCase != "boolean") {
 				return internalService.prefabTypeError("option.lowerCase", "boolean");
-			};
+			}
 			runtime.lowerCase = option.lowerCase;
-		};
+		}
 		if (typeof option.number != "undefined") {
 			if (typeof option.number != "boolean") {
 				return internalService.prefabTypeError("option.number", "boolean");
-			};
+			}
 			runtime.number = option.number;
-		};
+		}
 		if (typeof option.pool != "undefined") {
 			if (
 				advancedDetermine.isString(option.pool) != true ||
 				option.pool.length <= 1
 			) {
 				return internalService.prefabTypeError("option.pool", "string, and length >= 2");
-			};
+			}
 			runtime.pool = option.pool;
-		};
+		}
 		if (typeof option.symbol != "undefined") {
 			if (typeof option.symbol != "boolean") {
 				return internalService.prefabTypeError("option.symbol", "boolean");
-			};
+			}
 			runtime.symbol = option.symbol;
-		};
+		}
 		if (typeof option.upperCase != "undefined") {
 			if (typeof option.upperCase != "boolean") {
 				return internalService.prefabTypeError("option.upperCase", "boolean");
-			};
+			}
 			runtime.upperCase = option.upperCase;
-		};
-	};
+		}
+	}
 	if (runtime.lowerCase == false && runtime.number == false && typeof runtime.pool == "undefined" && runtime.symbol == false && runtime.upperCase == false) {
 		return internalService.prefabNoInputError("type");
-	};
+	}
 	if (typeof runtime.pool == "undefined") {
 		runtime.pool = "";
 		if (runtime.lowerCase == true) {
 			runtime.pool += randomDatabase["LowerCaseLetter"];
-		};
+		}
 		if (runtime.number == true) {
 			runtime.pool += randomDatabase["Number"];
-		};
+		}
 		if (runtime.symbol == true) {
 			runtime.pool += randomDatabase["Symbol"];
-		};
+		}
 		if (runtime.upperCase == true) {
 			runtime.pool += randomDatabase["UpperCaseLetter"];
-		};
-	};
+		}
+	}
 	const poolSize = runtime.pool.length;
 	let promiseDelta = [];
 	let resultObject = {};
@@ -108,8 +108,8 @@ function random(option) {
 				);
 			}).catch()
 		);
-	};
+	}
 	Promise.allSettled(promiseDelta);
 	return Object.values(resultObject).join("");
-};
+}
 module.exports = random;

@@ -35,7 +35,7 @@ const rdBytes6 = Math.pow(256, 6);
  */
 function prefabNoInputError(argumentName) {
 	throw new Error(`No input of "${argumentName}"!`);
-};
+}
 /**
  * @private
  * @function prefabReferenceError
@@ -45,7 +45,7 @@ function prefabNoInputError(argumentName) {
  */
 function prefabReferenceError(argumentName, description = "(Read the documentation for more information.)") {
 	throw new ReferenceError(`Invalid reference of "${argumentName}"! ${description}`);
-};
+}
 /**
  * @private
  * @function prefabTypeError
@@ -55,7 +55,7 @@ function prefabReferenceError(argumentName, description = "(Read the documentati
  */
 function prefabTypeError(argumentName, typeCondition) {
 	throw new TypeError(`Invalid type of "${argumentName}"! Require type of ${typeCondition}.`);
-};
+}
 module.exports.rdBytes1 = rdBytes1;
 module.exports.rdBytes2 = rdBytes2;
 module.exports.rdBytes3 = rdBytes3;

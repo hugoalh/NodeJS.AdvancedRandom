@@ -25,20 +25,20 @@ function unsignedFloat(option) {
 		if (typeof option.endian != "undefined") {
 			if (advancedDetermine.isString(option.endian) != true) {
 				return internalService.prefabTypeError("option.endian", "string");
-			};
+			}
 			option.endian = option.endian.toUpperCase();
 			if (option.endian !== "B" && option.endian !== "L") {
 				return internalService.prefabReferenceError("option.endian");
-			};
+			}
 			runtime.endian = option.endian;
-		};
+		}
 		if (typeof option.method != "undefined") {
 			if (advancedDetermine.isString(option.method) != true) {
 				return internalService.prefabTypeError("option.method", "string");
-			};
+			}
 			runtime.method = option.method.toLowerCase();
-		};
-	};
+		}
+	}
 	return Number.parseFloat(
 		(unsignedInteger({
 			endian: runtime.endian,
@@ -46,5 +46,5 @@ function unsignedFloat(option) {
 			range: 1e16
 		}) * 1e-16).toFixed(15)
 	);
-};
+}
 module.exports = unsignedFloat;

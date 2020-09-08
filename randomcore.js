@@ -14,5 +14,5 @@ const crypto = require("crypto");
  */
 function randomCore(signed = false, byteRange = 1, endian = "B") {
 	return crypto.randomBytes(byteRange)[`read${signed ? "" : "U"}Int${endian}E`](0, byteRange);
-};
+}
 module.exports = randomCore;
