@@ -1,6 +1,6 @@
 {
 	"name": "@hugoalh/advanced-random",
-	"version": "1.1.1",
+	"version": "1.2.0",
 	"description": "A library/module to provide a better random method via crypto.",
 	"keywords": [
 		"nodejs",
@@ -22,8 +22,8 @@
 		"@hugoalh/advanced-determine": "^4.0.0"
 	},
 	"engines": {
-		"node": ">= 10.0.0",
-		"npm": ">= 6.0.0"
+		"node": ">= 10.13.0",
+		"npm": ">= 6.4.1"
 	},
 	"private": false
 }
