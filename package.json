@@ -4,8 +4,8 @@
 	"description": "A library/module to provide a better random method via crypto.",
 	"keywords": [
 		"nodejs",
-		"random",
-		"crypto"
+		"crypto",
+		"random"
 	],
 	"homepage": "https://github.com/hugoalh-studio/NodeJS.AdvancedRandom#readme",
 	"bugs": {
