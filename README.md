@@ -72,7 +72,7 @@ A NodeJS library/module to provide a better random method via crypto.
 
 NodeJS (>= v10.13) & NPM (>= v6.4.1):
 
-```powershell
+```sh
 > npm install @hugoalh/advanced-random
 ```
 
