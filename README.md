@@ -1,5 +1,24 @@
 # Advanced Random (NodeJS Edition)
 
+[`AdvancedRandom.NodeJS`](https://github.com/hugoalh-studio/advanced-random-nodejs) - A NodeJS module to provide a better random method via crypto.
+
+[![GitHub Contributors](https://img.shields.io/github/contributors/hugoalh-studio/advanced-random-nodejs?label=Contributors&logo=github&logoColor=ffffff&style=flat-square)](https://github.com/hugoalh-studio/advanced-random-nodejs/graphs/contributors)
+[![GitHub Issues](https://img.shields.io/github/issues-raw/hugoalh-studio/advanced-random-nodejs?label=Issues&logo=github&logoColor=ffffff&style=flat-square)](https://github.com/hugoalh-studio/advanced-random-nodejs/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr-raw/hugoalh-studio/advanced-random-nodejs?label=Pull%20Requests&logo=github&logoColor=ffffff&style=flat-square)](https://github.com/hugoalh-studio/advanced-random-nodejs/pulls)
+[![GitHub Discussions](https://img.shields.io/github/discussions/hugoalh-studio/advanced-random-nodejs?label=Discussions&logo=github&logoColor=ffffff&style=flat-square)](https://github.com/hugoalh-studio/advanced-random-nodejs/discussions)
+[![GitHub Stars](https://img.shields.io/github/stars/hugoalh-studio/advanced-random-nodejs?label=Stars&logo=github&logoColor=ffffff&style=flat-square)](https://github.com/hugoalh-studio/advanced-random-nodejs/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/hugoalh-studio/advanced-random-nodejs?label=Forks&logo=github&logoColor=ffffff&style=flat-square)](https://github.com/hugoalh-studio/advanced-random-nodejs/network/members)
+![GitHub Languages](https://img.shields.io/github/languages/count/hugoalh-studio/advanced-random-nodejs?label=Languages&logo=github&logoColor=ffffff&style=flat-square)
+[![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/hugoalh-studio/advanced-random-nodejs?label=Grade&logo=codefactor&logoColor=ffffff&style=flat-square)](https://www.codefactor.io/repository/github/hugoalh-studio/advanced-random-nodejs)
+[![LGTM Alerts](https://img.shields.io/lgtm/alerts/g/hugoalh-studio/advanced-random-nodejs?label=Alerts&logo=lgtm&logoColor=ffffff&style=flat-square)
+![LGTM Grade](https://img.shields.io/lgtm/grade/javascript/g/hugoalh-studio/advanced-random-nodejs?label=Grade&logo=lgtm&logoColor=ffffff&style=flat-square)](https://lgtm.com/projects/g/hugoalh-studio/advanced-random-nodejs)
+[![License](https://img.shields.io/static/v1?label=License&message=MIT&color=brightgreen&style=flat-square)](./LICENSE.md)
+
+| **Release** | **Latest** | **Pre** |
+|:-:|:-:|:-:|
+| [**GitHub**](https://github.com/hugoalh-studio/advanced-random-nodejs/releases) ![GitHub Total Downloads](https://img.shields.io/github/downloads/hugoalh-studio/advanced-random-nodejs/total?label=%20&style=flat-square) | ![GitHub Latest Release Version](https://img.shields.io/github/release/hugoalh-studio/advanced-random-nodejs?sort=semver&label=%20&style=flat-square) (![GitHub Latest Release Date](https://img.shields.io/github/release-date/hugoalh-studio/advanced-random-nodejs?label=%20&style=flat-square)) | ![GitHub Latest Pre-Release Version](https://img.shields.io/github/release/hugoalh-studio/advanced-random-nodejs?include_prereleases&sort=semver&label=%20&style=flat-square) (![GitHub Latest Pre-Release Date](https://img.shields.io/github/release-date-pre/hugoalh-studio/advanced-random-nodejs?label=%20&style=flat-square)) |
+| [**NPM**](https://www.npmjs.com/package/@hugoalh/advanced-random) ![NPM Total Downloads](https://img.shields.io/npm/dt/@hugoalh/advanced-random?label=%20&style=flat-square) | ![NPM Latest Release Version](https://img.shields.io/npm/v/@hugoalh/advanced-random/latest?label=%20&style=flat-square) | ![NPM Latest Pre-Release Version](https://img.shields.io/npm/v/@hugoalh/advanced-random/pre?label=%20&style=flat-square) |
+
 <details>
   <summary><a href="https://github.com/hugoalh-studio/advanced-random-nodejs"><code>AdvancedRandom.NodeJS</code></a></summary>
   <img align="center" alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/hugoalh-studio/advanced-random-nodejs?logo=github&logoColor=ffffff&style=flat-square" />
@@ -11,60 +30,16 @@
   <img align="center" alt="GitHub Fork" src="https://img.shields.io/github/forks/hugoalh-studio/advanced-random-nodejs?logo=github&logoColor=ffffff&style=flat-square" />
 </details>
 
-A NodeJS module  to provide a better random method via crypto.
+A NodeJS module to provide a better random method via crypto.
 
-<table>
-  <tr>
-    <td><a href="./LICENSE.md"><b>License</b></a></td>
-    <td>MIT</td>
-  </tr>
-  <tr>
-    <td><a href="https://github.com/hugoalh-studio/advanced-random-nodejs/releases"><b>Release (GitHub)</b></a> <img align="center" src="https://img.shields.io/github/downloads/hugoalh-studio/advanced-random-nodejs/total?label=%20&style=flat-square" /></td>
-    <td>
-      <b>Latest:</b> <img align="center" src="https://img.shields.io/github/release/hugoalh-studio/advanced-random-nodejs?sort=semver&label=%20&style=flat-square" /> (<img align="center" src="https://img.shields.io/github/release-date/hugoalh-studio/advanced-random-nodejs?label=%20&style=flat-square" />)<br />
-      <b>Pre:</b> <img align="center" src="https://img.shields.io/github/release/hugoalh-studio/advanced-random-nodejs?include_prereleases&sort=semver&label=%20&style=flat-square" /> (<img align="center" src="https://img.shields.io/github/release-date-pre/hugoalh-studio/advanced-random-nodejs?label=%20&style=flat-square" />)
-    </td>
-  </tr>
-  <tr>
-    <td><a href="https://www.npmjs.com/package/@hugoalh/advanced-random"><b>Release (NPM)</b></a> <img align="center" src="https://img.shields.io/npm/dt/@hugoalh/advanced-random?label=%20&style=flat-square" /></td>
-    <td>
-      <b>Latest:</b> <img align="center" src="https://img.shields.io/npm/v/@hugoalh/advanced-random/latest?label=%20&style=flat-square" /><br />
-      <b>Pre:</b> <img align="center" src="https://img.shields.io/npm/v/@hugoalh/advanced-random/pre?label=%20&style=flat-square" />
-    </td>
-  </tr>
-  <tr>
-    <td><a href="https://github.com/hugoalh-studio/advanced-random-nodejs/graphs/contributors"><b>Contributor</b></a> <img align="center" src="https://img.shields.io/github/contributors/hugoalh-studio/advanced-random-nodejs?label=%20&style=flat-square" /></td>
-    <td><ul>
-        <li><a href="https://github.com/hugoalh-studio">hugoalh Studio</a></li>
-        <li><a href="https://github.com/hugoalh">hugoalh</a></li>
-    </ul></td>
-  </tr>
-  <tr>
-    <td><a href="https://github.com/hugoalh-studio/advanced-random-nodejs/issues?q=is%3Aissue"><b>Issue</b></a></td>
-    <td><img align="center" src="https://img.shields.io/github/issues-raw/hugoalh-studio/advanced-random-nodejs?label=%20&style=flat-square" /> : <img align="center" src="https://img.shields.io/github/issues-closed-raw/hugoalh-studio/advanced-random-nodejs?label=%20&style=flat-square" /></td>
-  </tr>
-  <tr>
-    <td><a href="https://github.com/hugoalh-studio/advanced-random-nodejs/pulls?q=is%3Apr"><b>Pull Request</b></a></td>
-    <td><img align="center" src="https://img.shields.io/github/issues-pr-raw/hugoalh-studio/advanced-random-nodejs?label=%20&style=flat-square" /> : <img align="center" src="https://img.shields.io/github/issues-pr-closed-raw/hugoalh-studio/advanced-random-nodejs?label=%20&style=flat-square" /></td>
-  </tr>
-  <tr>
-    <td><b>Code Quality</b></td>
-    <td>
-      <a href="https://www.codefactor.io/repository/github/hugoalh-studio/advanced-random-nodejs"><img align="center" alt="CodeFactor Grade" src="https://img.shields.io/codefactor/grade/github/hugoalh-studio/advanced-random-nodejs?logo=codefactor&logoColor=ffffff&style=flat-square" /></a>
-      <a href="https://lgtm.com/projects/g/hugoalh-studio/advanced-random-nodejs/alerts"><img align="center" alt="LGTM Alert" src="https://img.shields.io/lgtm/alerts/g/hugoalh-studio/advanced-random-nodejs?label=%20&logo=lgtm&logoColor=ffffff&style=flat-square" /></a>
-      <a href="https://lgtm.com/projects/g/hugoalh-studio/advanced-random-nodejs/context:javascript"><img align="center" alt="LGTM Grade" src="https://img.shields.io/lgtm/grade/javascript/g/hugoalh-studio/advanced-random-nodejs?logo=lgtm&logoColor=ffffff&style=flat-square" /></a>
-    </td>
-  </tr>
-</table>
-
-## 📜 Description
+## 📝 Description
 
 ### 🌟 Feature
 
 - Better random method without writing a lot of codes.
 - Native support for CommonJS and ECMAScript.
 
-## 📄 Documentation
+## 📚 Documentation
 
 *For the official documentation, please visit [GitHub Repository Wiki](https://github.com/hugoalh-studio/advanced-random-nodejs/wiki).*
 
