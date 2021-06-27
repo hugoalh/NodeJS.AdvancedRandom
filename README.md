@@ -61,7 +61,7 @@ NodeJS (>= v14.15.0) & NPM (>= v6.14.8):
 
 ### Example (Excerpt)
 
-```javascript
+```js
 const advancedRandom = require("@hugoalh/advanced-random");
 
 console.log(advancedRandom.signedFloat());// -0.159632574589625
