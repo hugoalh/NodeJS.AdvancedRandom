@@ -10,11 +10,11 @@
 > | ❌ | **No:** This is not supported due to this version(s) is too old. |
 > | ⚠ | **Issue:** This is not supported due to this version(s) is confirmed contains bug(s) and/or issue(s). |
 
-| **Version** | **Targeted NodeJS Version** | **Support** |
+| **Tag / Version** | **Target** | **Support** |
 |:-:|:-:|:-:|
-| v1.3.X | v14.15.0 | L |
-| v1.2.X | v14.15.0 | ❌⚠ |
-| v1.0.X \~ v1.1.X | v10.0.0 | ❌⚠ |
+| v1.3.X | NodeJS v14.15.0 + NPM v6.14.8 | L |
+| v1.2.X | NodeJS v14.15.0 + NPM v6.14.8 | ❌⚠ |
+| v1.0.X \~ v1.1.X | NodeJS v10.0.0 + NPM v6.4.1 | ❌⚠ |
 
 ## Report Vulnerability
 
